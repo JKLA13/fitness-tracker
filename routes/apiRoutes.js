@@ -5,6 +5,7 @@ const router = express.Router();
 const db = require("../models");
 
 //get routes
+//get workouts api call
 router.get("/api/workouts", (req, res) => {
   db.Workout.find({})
     .then((workoutDb) => {
@@ -14,7 +15,7 @@ router.get("/api/workouts", (req, res) => {
       res.json(err);
     });
 });
-
+//get work out range api call
 router.get("/api/workouts/range", (req, res) => {
   db.Workout.find({})
     .then((workoutDb) => {
@@ -25,7 +26,15 @@ router.get("/api/workouts/range", (req, res) => {
     });
 });
 //post routes
-
+router.post("api/workouts", ({ body }, res) => {
+  db.Workout.create(body)
+    .then((workoutDb) => {
+      res.json(workoutDb);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+});
 //put routes
 
 //export routes
