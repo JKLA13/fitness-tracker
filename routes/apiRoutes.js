@@ -1,5 +1,5 @@
 // require mods, routes
-const path = "path";
+const path = require("path");
 const express = require("express");
 const router = express.Router();
 const db = require("../models");
