@@ -19,6 +19,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useUnifiedTopology: true,
 });
 
+const db = require("./models");
+
 // need routes for api and homepage
 app.use(require("./routes/htmlRoutes"));
 app.use(require("./routes/apiRoutes"));
