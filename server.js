@@ -26,6 +26,6 @@ app.use(require("./routes/htmlRoutes"));
 app.use(require("./routes/apiRoutes"));
 
 // Listen on port 3000
-app.listen(3000, () => {
-  console.log("App running on port 3000!");
+app.listen(PORT, () => {
+  console.log(`App running on port ${PORT}!`);
 });
