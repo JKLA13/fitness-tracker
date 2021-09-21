@@ -14,6 +14,11 @@ app.use(express.static("public"));
 
 // need to setup db on server
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 // need routes for api and homepage
 
 // Listen on port 3000
