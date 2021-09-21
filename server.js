@@ -1,9 +1,12 @@
 //require modules
 const express = require("express");
-const mongojs = require("mongojs");
 const logger = require("morgan");
-
+const mongoose = require("mongoose");
+// need to setup db on server
+const db = require("./models");
 const app = express();
+
+const PORT = process.env.PORT || 3000;
 
 app.use(logger("dev"));
 
@@ -12,14 +15,11 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-// need to setup db on server
-
+//mongoose db connect
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-
-const db = require("./models");
 
 // need routes for api and homepage
 app.use(require("./routes/htmlRoutes"));
