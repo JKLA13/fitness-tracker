@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 // need to setup db on server
 const db = require("./models");
 const app = express();
+require("dotenv");
 
 const PORT = process.env.PORT || 3000;
 
