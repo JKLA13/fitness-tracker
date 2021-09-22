@@ -7,9 +7,10 @@ const Schema = mongoose.Schema;
 const exerciseSchema = new Schema({
   day: {
     type: Date,
-    default: () => {
-      new Date();
-    },
+    default: Date.now,
+    // () => {
+    //   new Date();
+    // },
   },
   exercises: [
     {
