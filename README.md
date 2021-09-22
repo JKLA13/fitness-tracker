@@ -28,7 +28,7 @@ The user should be able to:
 
 ## Links
 
-- https://dashboard.heroku.com/apps/fitness-tracker-jkla/deploy/github
+- https://fitness-tracker-jkla.herokuapp.com/
 - https://github.com/JKLA13/fitness-tracker
 
 ## Tech Used
